@@ -1,0 +1,14 @@
+.digit-section .ui.input > input {
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+  }
+  
+  .digit-section .ui.button {
+    width: 35px;
+    text-align: center;
+    border-radius: 0 !important;
+    border: 0px;
+    font-size: 16px;
+  }
+  

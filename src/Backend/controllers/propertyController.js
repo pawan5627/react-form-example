@@ -4,7 +4,9 @@ const Property = require('../models/PropertyModel');
 
 exports.getAllProperties = async (req, res) => {
   try {
-    const properties = await Property.find();
+    // Filter out records with empty developerName or _id
+    const properties = await Property.find({ developerName: { $ne: '' }, _id: { $exists: true } });
+
     res.json(properties);
   } catch (error) {
     res.status(500).json({ error: 'Server error' });
